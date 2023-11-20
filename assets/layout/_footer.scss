@@ -1,0 +1,130 @@
+@use '../abstracts/' as *;
+
+.footer {
+    border-top: 1px solid #d9d9d9;
+    margin-top: 3rem;
+
+    .blocks-wrapper {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        @include md {
+            flex-direction: row;
+            gap: 0;
+            row-gap: 2rem;
+        }
+        @include lg {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-block {
+        @include md {
+            width: 50%;
+        }
+        @include lg {
+            width: auto;
+        }
+    }
+
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+
+   .footer-links {
+        margin: 1rem 0 0 0 ;
+        padding: 0;
+        list-style: none;
+
+        a {
+            padding: 0.3rem 0;
+            color: $color-gray;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        i {
+            color: $color-primary;
+        }
+
+        a:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
+   }
+
+   .arrow-top {
+    padding: 1rem;
+    background-color: $color-primary;
+    color: #ffffff;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-dark;
+    }
+
+    svg {
+        width: 15px;
+        height: 15px;
+        display: block;
+    }
+   }
+
+   .copyright {
+        border-top: 1px solid #d9d9d9;
+        padding: 1rem 0;
+
+        p {
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            @include breakpoint(500px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+
+
+        .fb {
+            display: block;
+            border: 1px solid $color-gray;
+            border-radius: 99rem;
+            padding: 0.5rem;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: $color-primary;
+                border-color:  $color-primary;;
+            }
+
+            img {
+                display: block;
+                width: 15px;
+                height: 15px;
+                object-fit: cover;
+            }
+        }
+
+   }
+    
+}
+
+
+

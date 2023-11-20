@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+input[type="submit"] {
+    background-color: $color-primary;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+input[type="submit"]:hover {
+    background: $color-dark;
+}

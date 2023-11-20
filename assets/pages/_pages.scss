@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.content-wrapper {
+    @include lg {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+    }
+
+    @include xl {
+        grid-template-columns: 370px 1fr;
+    }
+
+    aside {
+        display: none;
+
+        @include lg {
+            display: block;
+        }
+    }
+}
