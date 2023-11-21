@@ -3,108 +3,109 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+$font-main: "Inter", sans-serif;
+
 * {
   box-sizing: border-box;
 }
 
 html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: $font-main;
   font-size: 16px;
   line-height: 1.4;
-  color: $color-gray;
+  color: white;
+  background-color: $footer-bg-color;
 }
 
-img {
-  display: block;
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1230px;
+  outline: 1px solid white;
 }
-figure {
-  margin-bottom: 0;
+
+ul {
+  list-style: none;
 }
 
 a {
-  color: $color-primary;
+  color: $nav-primary-color;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
-p {
-  margin: 0 0 1rem 0;
-}
+// img {
+//   display: block;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $color-dark;
-  line-height: 1.4;
-  margin: 0 0 1em 0;
-}
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
-h1 {
-  font-size: 1.6rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-h3 {
-  font-size: 1.3rem;
-}
-h4 {
-  font-size: 1.1rem;
-}
-h5 {
-  font-size: 0.95rem;
-}
-h6 {
-  font-size: 0.875rem;
-}
+// p {
+//   margin: 0 0 1rem 0;
+// }
 
-label {
-  color: $color-dark;
-}
+// h1 {
+//   font-size: 1.6rem;
+// }
+// h2 {
+//   font-size: 1.5rem;
+// }
+// h3 {
+//   font-size: 1.3rem;
+// }
+// h4 {
+//   font-size: 1.1rem;
+// }
+// h5 {
+//   font-size: 0.95rem;
+// }
+// h6 {
+//   font-size: 0.875rem;
+// }
 
-input,
-textarea {
-  outline: 0;
-}
+// label {
+//   color: $color-dark;
+// }
 
-input[type="text"],
-input[type="tel"],
-input[type="number"],
-input[type="email"] {
-  border: 1px solid $color-gray-light;
-  padding: 0.6rem 1rem;
-  width: 100%;
-  margin-top: 0.3rem;
-  color: $color-gray;
-  transition: all 0.3s;
-}
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus {
-  border-color: $color-primary;
-  background-color: #f4f4f4;
-}
+// input,
+// textarea {
+//   outline: 0;
+// }
 
-textarea {
-  margin-top: 0.3rem;
-  border: 1px solid $color-gray-light;
-  padding: 0.6rem 1rem;
-  width: 100%;
-  color: $color-gray;
-  transition: all 0.3s;
-}
-textarea:focus {
-  border-color: $color-primary;
-  background-color: #f4f4f4;
-}
+// input[type="text"],
+// input[type="tel"],
+// input[type="number"],
+// input[type="email"] {
+//   border: 1px solid $color-gray-light;
+//   padding: 0.6rem 1rem;
+//   width: 100%;
+//   margin-top: 0.3rem;
+//   color: $color-gray;
+//   transition: all 0.3s;
+// }
+// input[type="text"]:focus,
+// input[type="tel"]:focus,
+// input[type="number"]:focus,
+// input[type="email"]:focus {
+//   border-color: $color-primary;
+//   background-color: #f4f4f4;
+// }
+
+// textarea {
+//   margin-top: 0.3rem;
+//   border: 1px solid $color-gray-light;
+//   padding: 0.6rem 1rem;
+//   width: 100%;
+//   color: $color-gray;
+//   transition: all 0.3s;
+// }
+// textarea:focus {
+//   border-color: $color-primary;
+//   background-color: #f4f4f4;
+// }
 
 .container {
   padding: 0 1rem;
@@ -125,14 +126,14 @@ textarea:focus {
   }
 }
 
-.overlay.active {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  inset: 0;
-  z-index: 20;
-  cursor: pointer;
-}
+// .overlay.active {
+//   background-color: rgba(0, 0, 0, 0.5);
+//   position: absolute;
+//   inset: 0;
+//   z-index: 20;
+//   cursor: pointer;
+// }
 
-.main {
-  margin-top: 3rem;
-}
+// .main {
+//   margin-top: 3rem;
+// }
