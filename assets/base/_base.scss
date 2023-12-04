@@ -19,9 +19,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   padding: 0 15px;
-  width: 1230px;
+
   @include sm {
     width: 480px;
     margin: 0 auto;
