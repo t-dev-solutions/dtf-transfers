@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 // Possib section styles
 .possib-wrapper {
@@ -6,7 +6,7 @@
 }
 .btn-wrap {
   text-align: right;
-  button {
+  .btn-link {
     margin: 0 0 20px;
   }
 }
@@ -53,8 +53,8 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "div1 div2 div4"
-    "div1 div3 div5";
+    'div1 div2 div4'
+    'div1 div3 div5';
 }
 
 .div1 {
