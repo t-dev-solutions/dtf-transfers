@@ -1,5 +1,53 @@
 @use "../abstracts/" as *;
 
+.footer {
+  min-height: 600px;
+  padding-top: 90px;
+  .about {
+    font-weight: 200;
+    width: 420px;
+  }
+}
+
+.footer-title {
+  text-transform: uppercase;
+}
+
+ul {
+  font-size: 0.9rem;
+  padding: 0;
+  margin-top: 30px;
+  li {
+    margin-bottom: 17px;
+    font-weight: 200;
+    text-transform: capitalize;
+  }
+}
+
+.icons-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #2a2a36;
+  width: 100%;
+  margin: 90px 0 20px;
+}
+
+.copyright {
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+}
+
+.banks {
+  img {
+    margin: 5px;
+  }
+}
+
 // .footer {
 //     border-top: 1px solid #d9d9d9;
 //     margin-top: 3rem;

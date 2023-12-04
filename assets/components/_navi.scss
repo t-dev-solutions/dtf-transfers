@@ -7,7 +7,57 @@ nav {
 .nav_list {
   text-transform: uppercase;
   display: flex;
-  gap: 50px;
+  gap: 40px;
+  a:hover {
+    color: $nav-link-color;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  img.arrow-down {
+    margin-left: 6px;
+    position: absolute;
+    top: 6px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff21;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 15px 0 15px;
+  z-index: 1;
+  border-radius: 5px;
+  a {
+    color: $nav-primary-color;
+  }
+}
+
+//ul
+.dropdown_nav_list {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.75rem;
+  a {
+    cursor: pointer;
+  }
+  a:hover {
+    color: $nav-link-color;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 // .mob-wrapper {

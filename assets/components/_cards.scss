@@ -1,5 +1,53 @@
 @use "../abstracts/" as *;
 
+.process-item {
+  border: 1px solid rgb(243, 243, 243);
+  padding: 5px;
+  border-radius: 5px;
+  width: 379px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  .process-img {
+    img {
+      margin-top: 7px;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .process-title {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 0 10px;
+    font-size: 0.9rem;
+    color: $subtitle-color;
+    background-color: $divider-color;
+    .process-title-num {
+      font-size: 2rem;
+      display: flex;
+      width: 70px;
+      align-items: center;
+      justify-content: center;
+    }
+    .process-title-text {
+      margin: 5px 0 5px;
+    }
+  }
+  .process-title:hover {
+    background: url("./../../img/header/header-bg.png");
+    color: white;
+  }
+  .process-text {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    padding: 13px;
+    color: $text-color;
+    font-size: 0.938rem;
+    font-weight: 200;
+  }
+}
+
 // .cards-wrapper {
 //   display: grid;
 //   grid-template-columns: 1fr;
