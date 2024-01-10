@@ -1,38 +1,98 @@
 @use "../abstracts/" as *;
 
-.header-top.scrolled {
-  background: url("./../../img/header/header-bg.png");
-  transition: background-color 200ms linear;
-}
+.header-wrapper {
+  position: relative;
+  overflow: hidden;
 
-.header {
-  display: flex;
-  flex-direction: column;
-  background: url("./../../img/header/header-bg.png") center (center / cover) no-repeat;
-  &_nav {
-    margin-right: 50px;
-    display: none;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem 0;
+
+    &.scrolled {
+      background-color: $color-dark-bd;
+      padding: 1rem 0;
+    }
   }
 
   .container {
+    position: relative;
+    z-index: 10;
   }
 
-  .logo img {
-    width: 120px;
-    height: auto;
+  .header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
   }
 }
 
-.header-top-row {
+.top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
+
+  .mobile-btn {
+    flex-shrink: 0;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .nav-wrapper {
+    margin-right: 2rem;
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+    @include md {
+      width: 100px;
+    }
+  }
+
+  .open-cart {
+    position: relative;
+
+    svg {
+      width: 27px;
+      height: 27px;
+    }
+    .items-qty {
+      position: absolute;
+      top: -3px;
+      right: -8px;
+      width: 20px;
+      background-color: $color-yellow;
+      border-radius: 10px;
+      color: $color-dark;
+      text-align: center;
+      line-height: 20px;
+      font-size: 0.8rem;
+    }
+  }
 }
 
-.wrap {
+.header-column {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
 
@@ -42,49 +102,49 @@
   }
 
   .header_lang {
-    display: none;
-    position: relative;
-    gap: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    // display: none;
+    // position: relative;
+    // gap: 5px;
+    // cursor: pointer;
+    // display: flex;
+    // align-items: center;
 
-    &::after {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-right: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      display: inline-block;
-      transform: rotate(45deg) translateY(-4px);
-      margin-left: 0.1rem;
-    }
+    // &::after {
+    //   content: "";
+    //   width: 6px;
+    //   height: 6px;
+    //   border-right: 1px solid #fff;
+    //   border-bottom: 1px solid #fff;
+    //   display: inline-block;
+    //   transform: rotate(45deg) translateY(-4px);
+    //   margin-left: 0.1rem;
+    // }
 
-    &:hover .sub-menu {
-      display: block;
-    }
+    // &:hover .sub-menu {
+    //   display: block;
+    // }
 
-    .sub-menu {
-      display: none;
-      justify-content: center;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 60px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 0px black;
-      z-index: 1;
-      border-radius: 5px;
-      padding: 0.5rem 0;
-      margin: 0;
-      a {
-        color: $color-dark;
-        display: block;
-        text-align: center;
-        padding: 0.5rem 1rem;
-        text-transform: capitalize;
-      }
-    }
+    // .sub-menu {
+    //   display: none;
+    //   justify-content: center;
+    //   position: absolute;
+    //   top: 100%;
+    //   left: 0;
+    //   min-width: 60px;
+    //   background-color: #ffffff;
+    //   box-shadow: 0px 0px 0px black;
+    //   z-index: 1;
+    //   border-radius: 5px;
+    //   padding: 0.5rem 0;
+    //   margin: 0;
+    //   a {
+    //     color: $color-dark;
+    //     display: block;
+    //     text-align: center;
+    //     padding: 0.5rem 1rem;
+    //     text-transform: capitalize;
+    //   }
+    // }
   }
 
   .mobile-btn {
@@ -93,43 +153,71 @@
   }
 
   .header_shopcart {
-    display: flex;
-    align-items: center;
     cursor: pointer;
   }
 }
 
-.pd-none {
-  padding: 0;
-}
+.hero {
+  padding: 7rem 0 7rem 0;
 
-.header_promo {
-  display: flex;
-  align-items: center;
+  @include md {
+    padding: 9rem 0 11rem 0;
+  }
 
-  .header_title {
-    width: 50%;
+  @include lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 11rem 0 11rem 0;
+  }
+  @include xl {
+    padding: 14rem 0 14rem 0;
+  }
+
+  &__content {
+    max-width: 590px;
+
     h1 {
-      font-size: 3rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
       color: $nav-primary-color;
+      margin-bottom: 0;
+
+      @include sm {
+        font-size: 2.2rem;
+      }
+      @include md {
+        font-size: 2.7rem;
+      }
+      @include lg {
+        font-size: 3rem;
+      }
+
       span {
         color: $nav-link-color;
       }
     }
     p {
-      font-size: 0, 9375rem;
       font-weight: 200;
       color: $header-text-color;
       line-height: 1.7rem;
-      padding-bottom: 33px;
+      margin: 1.6rem 0 2.6rem 0;
+    }
+
+    .hero__btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
   }
 
-  .header_icons {
-    width: 50%;
-    display: flex;
-    justify-content: end;
+  &__img {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
   }
 }
 

@@ -1,0 +1,127 @@
+.mob-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mob-header h3 {
+  color: #c0c0c0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.close-btn {
+  width: 33px;
+  height: 33px;
+  position: relative;
+  cursor: pointer;
+}
+
+.close-btn::after,
+.close-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #c0c0c0;
+  height: 2px;
+  width: 100%;
+}
+
+.close-btn::before {
+  transform: rotate(45deg);
+}
+
+.close-btn::after {
+  transform: rotate(-45deg);
+}
+
+.mob-wrapper {
+  position: fixed;
+  transform: translateX(-100%);
+  visibility: hidden;
+  left: 0;
+  top: 0;
+  width: 360px;
+  max-width: 85%;
+  height: 100%;
+  background-color: #333333;
+  z-index: 999;
+  padding: 4rem 3rem 3rem 3rem;
+  color: #c0c0c0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mob-wrapper.active {
+  visibility: visible;
+  transform: translateX(0%);
+}
+
+.mob-navi {
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.mob-navi a {
+  display: block;
+  padding: 0.8rem 0;
+  color: #c0c0c0;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.mob-navi li {
+  position: relative;
+}
+
+.mob-navi > .menu-item-has-children > a::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  transform: rotate(45deg) translateY(-4px);
+  margin-left: 0.3rem;
+}
+
+.mob-navi .active.menu-item-has-children::after {
+  transform: rotate(180deg);
+}
+
+.mob-navi .sub-menu {
+  padding-left: 1rem;
+  background-color: #3a3a3a;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.mob-navi .sub-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.mob-navi .sub-menu a {
+  font-size: 0.875rem;
+  text-transform: none;
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+  z-index: 998;
+  visibility: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlay.active {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.4);
+}

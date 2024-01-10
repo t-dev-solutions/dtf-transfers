@@ -1,13 +1,14 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .btn-link {
+  font-size: 0.875rem;
   background-color: $button-bg-color;
   color: $button-text-color;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   &::after {
-    content: '';
+    content: "";
     width: 6px;
     height: 6px;
     border-right: 1px solid $button-text-color;
